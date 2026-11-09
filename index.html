@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A creative home for independent clothing designers to share their work, find inspiration, and bring new ideas to life.">
+    <meta name="theme-color" content="#09070c">
+    <title>DesignVault — Design. Create. Inspire.</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#overview" aria-label="DesignVault home">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+          <rect x="1" y="1" width="42" height="42" rx="15" fill="url(#brand-gradient)"/>
+          <path d="M25.8 9.5 13.5 26.1h9.1l-4.4 8.4 12.4-16.4h-9.2l4.4-8.6Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1"/>
+          <path d="M14.4 11.5c2.4 2.2 4.8 2.2 7.2 0m1.9 21c2.4-2.2 4.8-2.2 7.2 0" fill="none" stroke="#e8ddff" stroke-linecap="round" stroke-width="1.5"/>
+          <defs>
+            <linearGradient id="brand-gradient" x1="5" x2="39" y1="5" y2="39" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#9b70ff"/>
+              <stop offset="1" stop-color="#6842dd"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Design<span class="brand-light">Vault</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-toggle-label">Menu</span>
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation">
+        <a href="#overview">Home</a>
+        <a href="studio.html">Explore</a>
+        <a href="studio.html#boards">Create</a>
+        <a href="#join">Inspire</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="overview" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> A world of fashion, imagined</p>
+          <h1 id="page-title">Design<span>Vault</span></h1>
+          <p class="hero-kicker">D E S I G N <i>·</i> C R E A T E <i>·</i> I N S P I R E</p>
+          <p class="hero-description">
+            A creative space for fashion designers<br class="desktop-break"> and visionary minds.
+          </p>
+          <a class="button button-primary" href="studio.html">Explore more <span aria-hidden="true">→</span></a>
+          <div class="hero-caption" aria-hidden="true">COUTURE / 2026</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="couture-arch"></div>
+          <div class="art-glow"></div>
+          <svg class="gown-art" viewBox="0 0 620 710">
+            <defs>
+              <linearGradient id="gown-fabric" x1="140" x2="520" y1="180" y2="630" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#b34bba"/>
+                <stop offset=".24" stop-color="#57145f"/>
+                <stop offset=".52" stop-color="#190b20"/>
+                <stop offset=".73" stop-color="#79227e"/>
+                <stop offset="1" stop-color="#160b1c"/>
+              </linearGradient>
+              <linearGradient id="gown-sheen" x1="166" x2="432" y1="274" y2="586" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f0a7f2" stop-opacity=".85"/>
+                <stop offset=".26" stop-color="#9d39a2" stop-opacity=".4"/>
+                <stop offset=".65" stop-color="#35113d" stop-opacity="0"/>
+                <stop offset="1" stop-color="#d65cde" stop-opacity=".55"/>
+              </linearGradient>
+              <linearGradient id="mannequin" x1="300" x2="342" y1="75" y2="227" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f1d8b7"/>
+                <stop offset="1" stop-color="#866b60"/>
+              </linearGradient>
+              <filter id="gown-shadow" x="30" y="130" width="650" height="610" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                <feGaussianBlur stdDeviation="13"/>
+              </filter>
+            </defs>
+            <ellipse cx="371" cy="650" fill="#060408" opacity=".8" rx="230" ry="24" filter="url(#gown-shadow)"/>
+            <path d="M296 57h42v107h-42z" fill="#1e171d"/>
+            <path d="M317 17c-9 0-15 7-15 16v24h30V33c0-9-6-16-15-16Z" fill="url(#mannequin)"/>
+            <path d="M306 18c1-8 5-12 11-12s10 4 11 12h-22Z" fill="#d9b786"/>
+            <path d="M317 5V-2m-5 5h10" stroke="#d7b783" stroke-linecap="round" stroke-width="4"/>
+            <path d="M295 151c-13 13-38 20-67 31-19 8-38 26-51 49l-39 77 57 29 44-62-23 95c-6 28-17 55-32 81L83 592c-18 25-35 47-53 77h568c-34-37-64-72-93-112l-90-123c-19-26-28-57-33-90l-12-96 43 59 58-31-45-77c-12-20-28-35-49-46l-53-24c-7 22-24 34-48 34s-41-12-48-34Z" fill="url(#gown-fabric)" stroke="#ae54ad" stroke-opacity=".72" stroke-width="2"/>
+            <path d="M295 151c-7 22-1 48 22 70l-28 73-36-61 20-78m64-4c7 21 3 48-20 70l28 73 36-61-20-78" fill="none" stroke="#e78be5" stroke-opacity=".58" stroke-width="4"/>
+            <path d="M254 178c28 17 74 19 120-1m-83 18c30 7 61 5 88-8m-111 31c39 18 70 40 95 70m-134-32c50 20 94 52 128 94m-153-58c67 22 131 68 180 119m-200-75c83 25 163 78 229 144m-263-86c96 27 195 92 275 173m-302-121c101 23 207 78 310 153m-15-338 65 93m-127 64 154 102m-181-51 181 121m-221-64 245 165" fill="none" stroke="url(#gown-sheen)" stroke-linecap="round" stroke-width="8"/>
+            <path d="M140 614c99-27 259-25 384 6M183 655c96-23 210-21 307 5" fill="none" stroke="#be60c1" stroke-opacity=".55" stroke-width="3"/>
+            <path d="M298 150c8 27 20 43 39 48 17-5 29-21 37-48" fill="#1d0c23" stroke="#e092dd" stroke-width="2"/>
+          </svg>
+          <div class="hero-flower" aria-hidden="true">
+            <span>✿</span><span>✽</span><span>✿</span><span>✾</span><span>✽</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="DesignVault creative community">
+        <div class="ticker-track">
+          <span>IDEAS IN GOOD COMPANY</span><b>✳</b><span>DESIGNED TO BE SHARED</span><b>✳</b><span>MAKE SOMETHING YOURS</span><b>✳</b><span>IDEAS IN GOOD COMPANY</span><b>✳</b><span>DESIGNED TO BE SHARED</span><b>✳</b><span>MAKE SOMETHING YOURS</span><b>✳</b>
+        </div>
+      </section>
+
+      <section class="discover page-width" id="discover" aria-labelledby="discover-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A place to start</p>
+            <h2 id="discover-title">Inspiration looks good on you.</h2>
+          </div>
+          <p>Fresh perspectives, thoughtful details, and people who just get it.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card card-lilac">
+            <div class="card-art card-art-sketch" aria-hidden="true">
+              <span class="mini-sun"></span>
+              <span class="mini-dress"></span>
+              <span class="mini-caption">your next<br>great idea</span>
+            </div>
+            <div class="card-copy"><span class="card-number">01 / EXPLORE</span><h3>Find your next spark</h3><p>Discover fresh ideas and thoughtful work from the creative community.</p></div>
+          </article>
+          <article class="feature-card card-peach">
+            <div class="card-art card-art-fabric" aria-hidden="true">
+              <span class="fabric fabric-one"></span><span class="fabric fabric-two"></span><span class="fabric fabric-three"></span>
+              <span class="fabric-note">COLOR<br>STUDY <b>✳</b></span>
+            </div>
+            <div class="card-copy"><span class="card-number">02 / COLLECT</span><h3>Keep what moves you</h3><p>Save references, build moodboards, and make inspiration your own.</p></div>
+          </article>
+          <article class="feature-card card-mint">
+            <div class="card-art card-art-community" aria-hidden="true">
+              <span class="community-line"></span><span class="community-person person-one">M</span><span class="community-person person-two">J</span><span class="community-person person-three">A</span><span class="community-heart">✳</span>
+            </div>
+            <div class="card-copy"><span class="card-number">03 / CONNECT</span><h3>Make it together</h3><p>Meet designers, trade ideas, and find your people along the way.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="community page-width" id="community" aria-labelledby="community-title">
+        <div class="community-panel">
+          <div class="community-panel-copy">
+            <p class="eyebrow">For the ones who make</p>
+            <h2 id="community-title">Your work deserves a wider world.</h2>
+            <p>Bring your point of view, your half-finished sketches, your “what if?” ideas. There’s room for all of it here.</p>
+            <a class="button button-dark" href="#join">This sounds like my place <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="community-panel-art" aria-hidden="true">
+            <div class="panel-stamp">GOOD<br>THINGS<br>TAKE <em>SHAPE</em></div>
+            <div class="panel-thread"></div>
+            <div class="panel-flower">✳</div>
+            <div class="panel-label">SKETCH · SHARE · MAKE</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="join page-width" id="join" aria-labelledby="join-title">
+        <p class="eyebrow">Your next idea is waiting</p>
+        <h2 id="join-title">Come make something<br><span>of it.</span></h2>
+        <a class="button button-primary" href="mailto:hello@designvault.com">Say hello to DesignVault <span aria-hidden="true">↗</span></a>
+        <p class="join-note">A creative community for clothing designers and curious minds.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#overview">Design<span>Vault</span></a>
+      <p>© <span id="current-year"></span> DesignVault. Made with imagination.</p>
+      <a href="#overview">Back to top ↑</a>
+    </footer>
+  </body>
+</html>

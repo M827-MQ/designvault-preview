@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover fashion concepts, collect inspiration, and build your next moodboard in DesignVault.">
+    <meta name="theme-color" content="#09070D">
+    <title>Explore designs — DesignVault</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="studio.css">
+    <script src="studio.js" defer></script>
+  </head>
+  <body>
+    <div class="studio-layout">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="index.html" aria-label="DesignVault home">
+          <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+            <rect x="1" y="1" width="42" height="42" rx="15" fill="url(#brand-gradient)"/>
+            <path d="M25.8 9.5 13.5 26.1h9.1l-4.4 8.4 12.4-16.4h-9.2l4.4-8.6Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1"/>
+            <path d="M14.4 11.5c2.4 2.2 4.8 2.2 7.2 0m1.9 21c2.4-2.2 4.8-2.2 7.2 0" fill="none" stroke="#e8ddff" stroke-linecap="round" stroke-width="1.5"/>
+            <defs>
+              <linearGradient id="brand-gradient" x1="5" x2="39" y1="5" y2="39" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A855D6"/>
+                <stop offset="1" stop-color="#7625A8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>Design<span class="brand-accent">Vault</span></span>
+        </a>
+
+        <p class="sidebar-label">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Workspace">
+          <button class="side-link is-active" type="button" data-view="discover">
+            <span class="nav-icon" aria-hidden="true">⌕</span> Discover
+          </button>
+          <button class="side-link" type="button" data-view="saved">
+            <span class="nav-icon" aria-hidden="true">♡</span> Saved designs
+            <span class="side-count" id="saved-count">0</span>
+          </button>
+          <a class="side-link" href="#boards">
+            <span class="nav-icon" aria-hidden="true">▤</span> Moodboards
+          </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+        <div class="board-heading">
+          <p class="sidebar-label">YOUR BOARDS</p>
+          <button class="icon-button add-board" type="button" data-open-dialog aria-label="Create a moodboard">+</button>
+        </div>
+        <div class="board-list" id="board-list">
+          <p class="empty-boards">Your collections will show up here.</p>
+        </div>
+
+        <div class="sidebar-bottom">
+          <div class="profile-avatar" aria-hidden="true">D</div>
+          <div><strong>Design enthusiast</strong><span>Creative account</span></div>
+          <span class="profile-more" aria-hidden="true">···</span>
+        </div>
+      </aside>
+
+      <main class="main-content" id="discover">
+        <header class="topbar">
+          <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation">☰</button>
+          <div class="breadcrumbs"><a href="index.html">DesignVault</a><span>/</span><strong>Discover</strong></div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="design-search" type="search" placeholder="Search designs..." aria-label="Search designs">
+              <kbd>/</kbd>
+            </label>
+            <button class="avatar-button" type="button" aria-label="Your profile">D</button>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <section class="welcome-row">
+            <div>
+              <p class="overline">YOUR CREATIVE SPACE</p>
+              <h1 id="page-heading">Find your next <span>inspiration.</span></h1>
+              <p class="welcome-copy">A curated vault of ideas for the things you haven't made yet.</p>
+            </div>
+            <button class="button button-outline" type="button" data-open-dialog><span aria-hidden="true">＋</span> New moodboard</button>
+          </section>
+
+          <section class="featured" aria-label="Featured collection">
+            <div class="featured-image" aria-hidden="true">
+              <div class="featured-halo"></div>
+              <div class="featured-dress"></div>
+              <span class="featured-star star-a">✳</span>
+              <span class="featured-star star-b">✦</span>
+              <span class="featured-stamp">ATELIER<br>NO. 08</span>
+            </div>
+            <div class="featured-copy">
+              <span class="featured-tag"><span></span> EDITOR'S PICK</span>
+              <p class="featured-season">THE COLOR STORY · 2026</p>
+              <h2>After dark,<br>in full bloom.</h2>
+              <p>A study in sculptural silhouettes, midnight tones, and the romance of a little drama.</p>
+              <button class="featured-link" type="button" data-category="Eveningwear">Explore the edit <span aria-hidden="true">→</span></button>
+              <div class="featured-pagination"><span class="page-dot is-current"></span><span class="page-dot"></span><span class="page-dot"></span><span class="pagination-label">01 <i>/</i> 03</span></div>
+            </div>
+          </section>
+
+          <section class="design-section" aria-labelledby="designs-heading">
+            <div class="section-title-row">
+              <div>
+                <p class="overline">THE COMMUNITY VAULT</p>
+                <h2 id="designs-heading">Made to move you</h2>
+              </div>
+              <button class="sort-button" id="sort-button" type="button" aria-label="Toggle sort order">Recently added <span aria-hidden="true">⌄</span></button>
+            </div>
+
+            <div class="filters" role="group" aria-label="Filter designs by category">
+              <button class="filter-chip is-selected" type="button" data-category="All">All designs <span>08</span></button>
+              <button class="filter-chip" type="button" data-category="Ready-to-wear">Ready-to-wear</button>
+              <button class="filter-chip" type="button" data-category="Eveningwear">Eveningwear</button>
+              <button class="filter-chip" type="button" data-category="Accessories">Accessories</button>
+              <button class="filter-chip" type="button" data-category="Concept">Concept</button>
+            </div>
+
+            <div class="design-grid" id="design-grid" aria-live="polite">
+              <article class="design-card" data-title="Violet hour" data-designer="Mila Laurent" data-category="Eveningwear" data-date="8" data-art="violet">
+                <div class="design-art art-violet" role="img" aria-label="Violet evening gown concept">
+                  <span class="art-index">DV / 001</span><span class="silhouette silhouette-gown"></span><span class="art-caption">VIOLET<br>HOUR</span>
+                </div>
+                <div class="design-meta"><div><h3>Violet Hour</h3><p>by Mila Laurent</p></div><button class="save-button" type="button" aria-label="Save Violet Hour" aria-pressed="false">♡</button></div>
+                <span class="design-category">EVENINGWEAR</span>
+              </article>
+              <article class="design-card" data-title="Soft structure" data-designer="Noah Bell" data-category="Ready-to-wear" data-date="7" data-art="structure">
+                <div class="design-art art-structure" role="img" aria-label="Tailored cream jacket concept">
+                  <span class="art-index">DV / 002</span><span class="silhouette silhouette-jacket"></span><span class="art-caption">SOFT<br>STRUCTURE</span>
+                </div>
+                <div class="design-meta"><div><h3>Soft Structure</h3><p>by Noah Bell</p></div><button class="save-button" type="button" aria-label="Save Soft Structure" aria-pressed="false">♡</button></div>
+                <span class="design-category">READY-TO-WEAR</span>
+              </article>
+              <article class="design-card" data-title="Petal study" data-designer="Amara Okafor" data-category="Concept" data-date="6" data-art="petal">
+                <div class="design-art art-petal" role="img" aria-label="Sculptural floral couture concept">
+                  <span class="art-index">DV / 003</span><span class="silhouette silhouette-petal"></span><span class="art-caption">PETAL<br>STUDY 04</span>
+                </div>
+                <div class="design-meta"><div><h3>Petal Study</h3><p>by Amara Okafor</p></div><button class="save-button" type="button" aria-label="Save Petal Study" aria-pressed="false">♡</button></div>
+                <span class="design-category">CONCEPT</span>
+              </article>
+              <article class="design-card" data-title="Sculpted in silver" data-designer="Inez Park" data-category="Accessories" data-date="5" data-art="silver">
+                <div class="design-art art-silver" role="img" aria-label="Sculptural silver accessories concept">
+                  <span class="art-index">DV / 004</span><span class="silhouette silhouette-bag"></span><span class="art-caption">SCULPTED<br>IN SILVER</span>
+                </div>
+                <div class="design-meta"><div><h3>Sculpted in Silver</h3><p>by Inez Park</p></div><button class="save-button" type="button" aria-label="Save Sculpted in Silver" aria-pressed="false">♡</button></div>
+                <span class="design-category">ACCESSORIES</span>
+              </article>
+              <article class="design-card" data-title="After hours" data-designer="Sofia Reyes" data-category="Eveningwear" data-date="4" data-art="hours">
+                <div class="design-art art-hours" role="img" aria-label="Black and violet evening look">
+                  <span class="art-index">DV / 005</span><span class="silhouette silhouette-column"></span><span class="art-caption">AFTER<br>HOURS</span>
+                </div>
+                <div class="design-meta"><div><h3>After Hours</h3><p>by Sofia Reyes</p></div><button class="save-button" type="button" aria-label="Save After Hours" aria-pressed="false">♡</button></div>
+                <span class="design-category">EVENINGWEAR</span>
+              </article>
+              <article class="design-card" data-title="Sunday, somewhere" data-designer="Theo Martin" data-category="Ready-to-wear" data-date="3" data-art="sunday">
+                <div class="design-art art-sunday" role="img" aria-label="Relaxed modern daywear concept">
+                  <span class="art-index">DV / 006</span><span class="silhouette silhouette-suit"></span><span class="art-caption">SUNDAY,<br>SOMEWHERE</span>
+                </div>
+                <div class="design-meta"><div><h3>Sunday, Somewhere</h3><p>by Theo Martin</p></div><button class="save-button" type="button" aria-label="Save Sunday, Somewhere" aria-pressed="false">♡</button></div>
+                <span class="design-category">READY-TO-WEAR</span>
+              </article>
+              <article class="design-card" data-title="Orbit earrings" data-designer="Lena Chen" data-category="Accessories" data-date="2" data-art="orbit">
+                <div class="design-art art-orbit" role="img" aria-label="Abstract gold and violet jewelry concept">
+                  <span class="art-index">DV / 007</span><span class="silhouette silhouette-earrings"></span><span class="art-caption">ORBIT<br>OBJECTS</span>
+                </div>
+                <div class="design-meta"><div><h3>Orbit Objects</h3><p>by Lena Chen</p></div><button class="save-button" type="button" aria-label="Save Orbit Objects" aria-pressed="false">♡</button></div>
+                <span class="design-category">ACCESSORIES</span>
+              </article>
+              <article class="design-card" data-title="The new romantic" data-designer="Jules Moreau" data-category="Concept" data-date="1" data-art="romantic">
+                <div class="design-art art-romantic" role="img" aria-label="Romantic sheer layered couture concept">
+                  <span class="art-index">DV / 008</span><span class="silhouette silhouette-romantic"></span><span class="art-caption">THE NEW<br>ROMANTIC</span>
+                </div>
+                <div class="design-meta"><div><h3>The New Romantic</h3><p>by Jules Moreau</p></div><button class="save-button" type="button" aria-label="Save The New Romantic" aria-pressed="false">♡</button></div>
+                <span class="design-category">CONCEPT</span>
+              </article>
+            </div>
+            <p class="no-results" id="no-results" hidden>No designs found. Try another search or category.</p>
+          </section>
+
+          <section class="boards-section" id="boards" aria-labelledby="boards-heading">
+            <div class="section-title-row">
+              <div><p class="overline">COLLECT YOUR CURIOSITY</p><h2 id="boards-heading">Your moodboards</h2></div>
+              <button class="text-action" type="button" data-open-dialog>Create a board <span aria-hidden="true">＋</span></button>
+            </div>
+            <div class="empty-board-panel" id="empty-board-panel">
+              <div class="empty-board-icon" aria-hidden="true">▤</div>
+              <div><h3>A place for all your “what ifs?”</h3><p>Create your first moodboard and start collecting the things that inspire you.</p></div>
+              <button class="button button-primary" type="button" data-open-dialog>Make a moodboard <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="created-boards" id="created-boards"></div>
+          </section>
+
+          <footer class="studio-footer"><span>DESIGNVAULT</span><span>A little space for big ideas.</span><a href="index.html">Back to the intro ↑</a></footer>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="board-dialog" id="board-dialog" aria-labelledby="dialog-title">
+      <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close dialog">×</button></form>
+      <p class="overline">START COLLECTING</p>
+      <h2 id="dialog-title">Make a moodboard</h2>
+      <p class="dialog-copy">Give this little collection a name. You can add designs to it as you explore.</p>
+      <form id="board-form">
+        <label for="board-name">Board name</label>
+        <input id="board-name" name="boardName" maxlength="40" placeholder="e.g. Summer in silk" required>
+        <p class="form-error" id="form-error" hidden>Please give your moodboard a name.</p>
+        <div class="dialog-actions">
+          <button class="button button-outline" type="button" data-close-dialog>Not now</button>
+          <button class="button button-primary" type="submit">Create board <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
